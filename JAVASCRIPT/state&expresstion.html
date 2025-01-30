@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var x = 22;
+       var y = 32;
+       console.log(x+y);
+       var a = 2;
+       var b = 32;
+       console.log(a-b);
+       var p = 22;
+       var q = 32;
+       console.log(p*q);
+       var r = 22;
+       var s = 3;
+       console.log(r%s);
+
+       var m = 5
+       var n= 32;
+       console.log(m/n)
+
+       // * increment 1 
+        
+       var inc = 23;
+        inc++;
+        console.log(inc)
+
+        var dec = 22;
+        dec--;
+        console.log(dec)
+
+        var preinc = 21;
+        ++preinc;
+        console.log(preinc);
+
+        var predec = 20;
+        --predec;
+        console.log(predec)
+
+        //Given var x = “Edupoly” and var y = “Training”. Print “Edupoly Training” in the console.
+     
+        var st1 = "madhuri";
+        var st2 = "Gowri";
+        console.log(st1+st2)
+
+        //Find the perimeter of a square having each side 4cm.
+
+        var sidelength = 4 ;
+
+        var perimeter = 4*sidelength;
+
+        console.log(perimeter);
+
+        // Find the perimeter of a rectangle of length 50cm and breadth 35cm.
+
+        var length = 50;
+        var breadth = 35 ;
+        let perime = 2 * (length+breadth);
+        console.log(perime)
+
+    // Find the circumference of a circle of radius 20cm. (Take π = 3.14)
+
+      var radius = 20 ;
+      var pi = 3.14 ;
+      var circumference  = 2*pi*radius;
+
+      console.log(circumference);
+ 
+      //Find the area of a square having each side 12cm.
+       
+      var side = 12 ;
+      var areaofside = side*side ;
+      console.log(areaofside);
+
+      // Find the area of a rectangle of length 25cm and breadth 16cm.
+         var length = 25;
+         var breadth = 16 ;
+         var area = length*breadth;
+         console.log(area);
+
+     // Find the area of a circle of radius 3.75cm. 
+
+       var radius = 3.75;
+    
+       var areaofcircle = 2*pi*(radius*radius);
+       console.log(areaofcircle)
+
+    // Given the marks of 3 subjects as 67,48 and 74. Print the average marks of the 3 subjects.
+
+      var sub1 = 67 ;
+      var sub2 = 48 ;
+      var sub3 = 74 ;
+      var totalsub = sub1+sub2+sub3/3;
+      console.log(totalsub)
+
+    // Given the cost of a product as ₹538.56, add 18% GST to it and print the total cost.
+      
+       var prodcost = 538 ;
+        var   gst = 18 ;
+         var totalgst = prodcost*gst/100+prodcost 
+
+         console.log(totalgst)
+
+         // Given a variable var x = 48. Decrement its value by 1.
+             var c = 48;
+             var d = --c;
+             console.log(d)
+
+          // Write a script to swap two numbers;
+
+              var num1 = 100 ,num2=200 ;
+
+              var num3;
+              num3=num1;
+              num1=num2;
+              num2=num3
+              console.log(num1);
+              console.log(num2);
+              
+              //console.log('before swaping: num1=${num1},num2=${num2}')
+              // //console.log('after swaping; num1=${num1},num2=${num2}');
+        
+         //Write a script to swap two numbers without using 3rd variable (please use *,%,/ not + and -)
+                   var v1 = 5;
+                   var v2 = 10;
+                v1 = v1*v2;
+                v2 = v1/v2;
+                v1 = v2 /v1;
+                 console.log(v1);
+                 console.log(v2)
+
+         // Write a program to print the reminder of a division 
+            
+             // Initialize two numbers
+        let dividend = 17;
+        let divisor = 5;
+
+         // Calculate the remainder
+       let remainder = dividend % divisor;
+
+         // Display the remainder
+        console.log(`The remainder of ${dividend} divided by ${divisor} is ${remainder}.`);
+
+     // Write a program to print the simple interest rate of given P T R values
+        // Given values
+      let P = 1000; // Principal amount
+      let T = 2;    // Time in years
+      let R = 5;    // Rate of interest per year
+
+       // Calculate simple interest
+        let SI = (P * T * R) / 100;
+
+       // Display the result
+       console.log(`The simple interest is ₹${SI}.`);
+
+
+      // Write a program to print the simple interest rate of given P T R values
+
+              let principal = 10000 ;
+              let time = 1.5 ;
+              let rate = 2 ;
+
+              let simpleinterest = (principal*time*rate) / 100;
+
+              console.log(simpleinterest);
+
+        // Write a program to print the max of given two numbers using ternary operator 
+           
+          var mini1 = 20 ;
+          var mini2 = 10 ;
+
+          var  max = (mini1>mini2)? mini1:mini2;
+          console.log(max)
+
+          // Write a program to print the max of given three numbers using ternary operator
+
+             var max1 = 100 ;
+             var max2 = 200 ;
+             var max3 = 300 ;
+             
+             let maxter = (max1>max2) ? (max1 > max3 ? max1 : max3)
+                                      : (max2 > max3 ? max2 : max3);
+
+             console.log(maxter)
+
+         // Find the area of a square for given length of a side
+             let sid = 12 ;
+             let ara = sid*sid;
+             console.log(ara)
+
+        // Check a given number is even or not using ternary operator
+            let givenum = +prompt();
+            let reslt = (givenum % 2 ==0) ? "even": "odd";
+            console.log(reslt)
+
+        // Check a given number is odd or not using ternary operator
+            let typenum = + prompt();
+            let typeodd = (typenum % 2 !== 0) ? "even": "odd"
+
+            console.log(typeodd)
+
+        // Check a given number is positive or not using ternary operator 
+          let checknum = prompt();
+          let tpnum = (checknum>0) ? "positive" : (checknum===0 ? "zero" : "negative")
+
+          console.log(tpnum)
+
+
+        // Check a given number is multiple of 4 or not using ternary operator 
+
+         let m1 = prompt();
+         let m2 = (m1%4==0)?"even":"odd";
+         console.log(m2)
+
+        // Print the (a+b)^2 for given a and b values.
+
+           let p1 = 2 ;
+           let p2 = 3 ;
+
+           let p3 = (5)**2;
+           console.log(p3)
+
+       // Print the (a+b)^3 for given a and b values
+          
+          let q1 = 3 ;
+           let q2 = 3 ;
+
+           let q3 = (6)**3;
+           console.log(q3)
+        
+
+      // Print the (a+b+c)^2 for given a and b values
+
+           let a1 = 2 ;
+           let a2 = 3 ;
+            let a3 = 4 ;
+           let a4 = (9)**2;
+           console.log(a4)
+
+     // Ramesh’s basic salary is input through the keyboard. His dearness allowance is 40% of basic salary, 
+     // and house rent allowance is 20% of basic salary. Write a program to calculate his gross salary.
+         let basicsalary = prompt();
+
+         let dearnessallowance = 0.4*basicsalary ;
+         let houserent = 0.2*basicsalary ;
+           
+         let grosssalary = basicsalary+dearnessallowance+houserent
+
+          console.log(grosssalary)
+
+
+
+
+            
+    </script> 
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h2 id="d1">Welcome to Eduploy</h2>
+    <input type="text" id="d2" onkeyup="abc()">
+    <input type="password" id="d3">
+    <button onclick="xyz()">Click me...</button>
+
+    <script>
+
+       function abc(){
+        var x = document.getElementById("d2")
+         //console.log(x.value);
+         var y = document.getElementById("d1");
+         y.innerHTML="HI "+x.value+","+msg
+       }
+        function xyz(){
+            var z = document.getElementById('d3');
+        console.log(z.value)
+        }
+    </script> 
+</body>
+</html>

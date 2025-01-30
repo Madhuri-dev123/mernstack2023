@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+     body{
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            padding : 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            width: 100%;
+            max-width: 800px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+  </style>
+</head>
+<body>
+    <h1 id="d1">welcome to fruits store</h1>
+
+   <ul id="d2">
+
+   </ul>
+      <ul id="d3"></ul>
+      
+      <h1>Image Gallery</h1>
+      <div class="gallery" id="imageGallery"></div>
+
+     
+
+  <script>
+    var x =  document.getElementById("d1")
+    x.style.color="red"
+    console.log(x.innerHTML)
+
+    var fruits = ["apple","mango","oranges","banana","gova"]
+    fruits.forEach(function(a){
+      var y = document.createElement("li")
+      y.innerHTML=a;
+      var z = document.getElementById("d2")
+      z.appendChild(y)
+    })
+
+
+
+    var cost = [100,60,80,50,40,30];
+    cost.forEach(function(c){
+      var r = document.createElement("li")
+      r.innerHTML=c
+      var s = document.getElementById("d3")
+      s.appendChild(r)
+    })
+
+    //var images = ["https://media.istockphoto.com/id/1282887504/vector/meditation-background-with-sunset.jpg?s=1024x1024&w=is&k=20&c=DIrgnlCfxzm-ITvQByw-mW-W5mBvVKZpl904bw7K3JE=","https://media.istockphoto.com/id/165678178/vector/yoga-positions-woman.jpg?s=1024x1024&w=is&k=20&c=oM_tnrJxkFtUEFd1aVv8uJvYtbpx4YgNr6e2WaC6RZc=","https://media.istockphoto.com/id/867037792/vector/lotus-icon.jpg?s=1024x1024&w=is&k=20&c=FPqAl2amPvjNj_h7xjSBGKvor9-oYhw28_kLpeUjIEw="]
+    const imageUrls = [
+            "https://via.placeholder.com/300",
+            "https://via.placeholder.com/400",
+            "https://via.placeholder.com/500",
+            "https://via.placeholder.com/600"
+        ];
+
+        // Select the gallery container
+        const gallery = document.getElementById("imageGallary");
+
+        // Iterate through the array and create image elements
+        imageUrls.forEach(url => {
+            const img = document.createElement("img");
+            img.src = url;
+            img.alt = "Gallery Image";
+            gallery.appendChild(img);
+        });
+
+
+
+             
+
+                
+          
+  
+  </script>
+</body>
+</html>            
