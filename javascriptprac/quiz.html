@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link href="quizz.css" rel="stylesheet"/>
+</head>
+<body>
+        <div class="navbar">Welcome to Quiz</div>
+        <div class="quiz-container">
+            <div class="progress-bar">
+            <div class="progress-bar-fill" id="progress"></div>
+            </div>
+            <div class="content">
+                <div class="quation" id="quation">  quaion will appear here</div>
+                <div class="option" id="option"></div>
+            </div>
+            <div class="retry" id="retry">
+                <button onclick="">Retry</button>
+            </div>
+        </div>
+
+    <Script>
+         //json data 
+         // quation & answers (array of objects)
+         const quizData=[
+ {quation:"what is javascript", option:["programing language","stylesheet","database","coffeent"],answer:0},
+ {quation:"what is javascript", option:["programing language","stylesheet","database","coffeent"],answer:0},
+ {quation:"what is javascript", option:["programing language","stylesheet","database","coffeent"],answer:0},
+ {quation:"what is javascript", option:["programing language","stylesheet","database","coffeent"],answer:0},
+ {quation:"what is javascript", option:["programing language","stylesheet","database","coffeent"],answer:0},
+ {quation:"what is javascript", option:["programing language","stylesheet","database","coffeent"],answer:0},
+ {quation:"what is javascript", option:["programing language","stylesheet","database","coffeent"],answer:0},
+ {quation:"what is javascript", option:["programing language","stylesheet","database","coffeent"],answer:0},
+ {quation:"what is javascript", option:["programing language","stylesheet","database","coffeent"],answer:0},
+         
+         ]
+
+         //action 
+         const quationE1 = document.getElementById("quation");
+         const optionE1  = document.getElementById("option");
+
+         const progressBarfill = document.getElementById("progress")
+         const retryE1 = document.getElementById("retry");
+
+          let currentQuastionIndex=0;
+          let score = 0;
+          let attemps = 0;
+
+          function loadQuation(){
+             //current currentoption use select index
+             const currentQuation = quizData[currentQuetionIndex];
+          optionE1textContent = currentQuation.quation;
+             optionE1.innerHTML="";
+             currentQuation.option.forEach((option,index)=>{
+                   
+                const optionE1 = document.createElement("div");
+                optionE1.textContent=option;
+                optionE1.classList.add("option");
+                optionE1.addEventListener("click",()=>selectOption(index));
+                optionE1.appendChild(optionE1);
+             })
+          }
+                   function selectOption(){
+                    const currentQuestion = quizData[currentQuestionIndex]
+                    const options = document.querySelectorAll(".option")
+                    if(selectedIndex===currentQuestion.answer)
+                   {
+                    option[selectedIndex].classList.add("correct");
+                    score++;
+                   }
+                   else
+                   {
+                    options[selectedIndex].classList.add("wrong");
+                    options[currentQuestion.answer].classList.add("correct");
+                    score--;
+                   }
+                   setTimeout(() => {
+                      currentQuestionIndex++;
+                      if(currentQuestionIndex < quizData.length)
+                      {
+                        updateProgressBar();
+                        loadQuation();
+                      }
+                      else{
+                        showResults();
+                      }
+                   },20000)
+                   }
+
+                   function updateProgressBar()
+                   {
+                    const progress = ((currentQuestionIndex+1)/quizData.length)*100;
+                    progressBarfill.style.width=progress+"%"
+                   }
+                   function showResults()
+                   {
+                    quationE1.textContent=`uiz completed your score is ${score}/${quizData.length}`;
+                    optionE1.innerHTML="";
+                    if(score <8 && attemps <=1)
+                   {
+                    retryE1.style.display="block";
+                   }
+                   else{
+                    retryE1.style.display="none";
+                   }
+                   }
+
+                   function retryQuiz()
+                   {
+                    attemps++;
+                    if(attemps<=1)
+                   {
+                    currentQuestionIndex=0;
+                    score=0;
+                    retryQuiz.style.display="none";
+                    loadQuation();
+                    updateProgressBar();
+                   }
+                   else{
+                    quationE1.textContent="no more attempts";
+                   optionE1.innerHTML="";
+                    retryE1.display="none";
+                                  }
+                   }
+                      loadQuation();
+                      updateProgressBar();
+                   
+    </Script>
+
+
+  
+    
+</body>
+</html>
