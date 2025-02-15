@@ -4,49 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .container{
-            display: grid;
-            grid-template-columns:100px auto auto auto ;
-            gap:10px;
-            background-color: blue;
-            padding: 10px;
-        }
-
-        .container>div{
-            background-color: blanchedalmond;
-            text-align: center;
-            padding: 20px;
-            font-size: 30px;
-        }
-        .items1{
-            grid-row: 1/6;
-            grid-area: 1/2/5/6;
-            justify-self: first baseline;
-        }
-    </style>
+    <link rel=" stylesheet" href="grid.css"> 
 </head>
 <body>
     <div class="container">
-        <div class="items1">1</div>
-        <div class="items2">2</div>
-        <div class="items3">3</div>
+        <div class="header">
+            <h2> This is my header</h2>
+
         </div>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="content">
+        <img src="./images/image6.jpg">
+        <p>loren ipsum dolor sit amet, consectetur adipiscing elit.labore</p>
+    </div>
+    <div class="footer" style="background-color: black;">
+        <h4>Footer</h4>
+    </div>
 </body>
 </html>
-
-<!-- grid contianer (parent element)
-    we given child elements like 1,2,3
-     
-    grid templete row's
-    grid templete colums
-
-    shorect methos is 
-    gride templete 
-
-    justify content property
-
-    align -content
-
-    
--->

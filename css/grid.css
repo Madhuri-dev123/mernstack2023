@@ -1,0 +1,24 @@
+.container{
+    display: grid;
+    grid-template-areas: "heder header"
+    "menu content" 
+    "footer footer";
+    grid-template-columns: 1fr 3fr ;
+    background-color :rebeccapurple ;
+    padding: 5px;
+}
+.container>div{
+    background-color: aqua;
+    padding: 6px;
+}
+.container>div.header{
+    background-color: yellow;
+    padding: 12px;
+    grid-area: header;
+    text-align: center;
+
+}
+.container > div.menu{
+    grid-area: footer;
+    background-color: aqua;
+}
