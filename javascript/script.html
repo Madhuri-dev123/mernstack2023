@@ -6,20 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="title"> welcome to class</h1>
-    <button id="magic">Click me </button>
+    <h1 title="main">Main</h1>
+    <button id="click1">1</button>
+    <button id="click2">2</button>
+    <button id="click2">2</button>
+    <button id="click2">2</button>
+    <button id="click5">5</button>
+    <button id="click5">6</button>
+    <button id="click5">7</button>
     <script>
-        let button = document.getElementById("magic");
-        // add an action 
-        button.addEventListener("click",function(){
-              document.getElementById("title").innerHTML="you clicked the button "
-        })
+   let button= document.querySelector("#click1");
+   let allbutton = document.querySelectorAll(".click2")
+
+   allbutton.forEach((button,index)=>{
+    button.innerText ="click2";
+    button.addEventListener("click",()=>{
+        button.innerText = "3";
+        document.title="I changed";
+    });
+    
+   });
     </script>
 </body>
 </html>
-<!-- 
-  id:document.getElementByid()
-  tag : document.getElementBytagname()
-  document.quaryselector("#title")
-  documnet.quaryselectorall("#magic")
- -->
