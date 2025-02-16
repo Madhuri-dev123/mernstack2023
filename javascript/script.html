@@ -6,8 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="index.js">
-            
+    <h1 id="title"> welcome to class</h1>
+    <button id="magic">Click me </button>
+    <script>
+        let button = document.getElementById("magic");
+        // add an action 
+        button.addEventListener("click",function(){
+              document.getElementById("title").innerHTML="you clicked the button "
+        })
     </script>
 </body>
 </html>
+<!-- 
+  id:document.getElementByid()
+  tag : document.getElementBytagname()
+  document.quaryselector("#title")
+  documnet.quaryselectorall("#magic")
+ -->
