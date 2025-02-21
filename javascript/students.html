@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <ul id="d1">
+    </ul>
+    <ul id="d2"></ul>
+    <h1 id="d3">Hey, Hii i am Madhuri</h1>
+    <ul id="d4"></ul>
+    <table border="1">
+       <tr>
+        <th>name</th>
+       </tr>
+       <tr>
+        <td>madhuri</td>
+    </tr>
+    </table>
+</head>
+<body>
+    <script>
+        let students= ["srinuvasulu","anjaniyalu","rajashaker","mohan"]
+        students.forEach(function(a,b){
+          var s = document.createElement("li")
+          s.innerHTML=a;
+          let x = document.getElementById("d1")
+          x.appendChild(s)
+        })
+
+
+       let fruits = ["banana","apple","orange","Mango","Grapes"]
+         fruits.forEach(function(p){
+            let f = document.createElement("li")
+            f.innerHTML=p;
+            let q = document.getElementById("d2")
+            q.appendChild(f)
+
+                 })
+
+        let m = document.getElementById("d3");
+        console.log(m)
+        m.style.color="red"
+
+        let num = [2,4,6,839,8,9,12,14];
+        num.forEach(function(e){
+            let n = document.createElement("li")
+            n.innerHTML=e;
+            let m = document.getElementById("d4")
+            m.appendChild(n)
+        })
+
+     let studentsdata = [
+                     {name:"madhuri",age:24,gender:"female",city:"kandukur"},
+                     {name:"renuka",age:23,gender:"female",city:"hyderabad"},
+                     {name:"raju",age:22,gender:"male",city:"ongole"}
+     ]
+
+     var x = document.createElement("table")
+            x.style.border = "1px solid black"
+            var y = document.createElement("tr")
+            x.appendChild(y)
+            var z = document.createElement("th")
+            z.style.border= "1px solid black"
+            z.innerHTML = "Name"
+            y.appendChild(z)
+            var a = document.createElement("th")
+            a.style.border= "1px solid black"
+            a.innerHTML = "Age"
+            y.appendChild(a)
+            ar.forEach(function(value){
+                var b = document.createElement("tr")
+                b.style.border= "1px solid black"
+                x.appendChild(b)
+                var c = document.createElement("td")
+                c.style.border= "1px solid black"
+                c.innerHTML = "madhuri"
+                c.innerHTML = value.Name
+                b.appendChild(c)
+                var d = document.createElement("td")
+                d.style.border= "1px solid black"
+                d.innerHTML = "20"
+                d.innerHTML = value.Age
+                b.appendChild(d)
+            });
+            var y = document.getElementById("dd")
+            y.appendChild(x)
+
+        
+    </script>
+</body>
+</html>
