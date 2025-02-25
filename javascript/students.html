@@ -17,6 +17,8 @@
         <td>madhuri</td>
     </tr>
     </table>
+
+    <div id=" image-container"></div>
 </head>
 <body>
     <script>
@@ -85,6 +87,17 @@
             });
             var y = document.getElementById("dd")
             y.appendChild(x)
+
+        
+        let arrayofimages = ["https://tse1.mm.bing.net/th?id=OIP.ipfGiyG7ctjSkhmjCpNfTAHaFj&pid=Api&rs=1&c=1&qlt=95&w=133&h=99","https://tse1.mm.bing.net/th?id=OIP.NOH8bBZLrC_5WpwupOJNkwHaEX&pid=Api&P=0&h=180","https://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg"]
+         arrayofimages.forEach(function(i){
+
+            let container = document.getElementById("image-container")
+            container.innerHTML=i;
+            let image = document.createElement("img");
+            image.appendChild(container)
+
+         })
 
         
     </script>
