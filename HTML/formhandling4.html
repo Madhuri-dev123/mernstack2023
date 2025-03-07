@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="event.preventDefault()">
+        firstname:<input type="text" id="fn"><br>
+        lastname:<input type="text" id="ln"><br>
+        <b>gender:</b>
+        <input type="radio" name="gender" value="female" onchange="getGender(event)">:Female
+        <input type="radio" name="gender" value="male" onchange="getGender(event)">:male
+        <input type="radio" name="gender" value="Others" onchange="getGender(event)">:Others
+        <br>
+       <b>Technoligies:</b>
+       <br>
+    <input type="checkbox" onchange="selectTech(event)" value="html">:HTML &nbsp;
+    <input type="checkbox" onchange="selectTech(event)" value="css">:Css &nbsp;
+    <input type="checkbox" onchange="selectTech(event)" value="boot" >;Bootstrap &nbsp;
+    <input type="checkbox" onchange="selectTech(event)" value="java" >;java &nbsp;
+    <input type="checkbox" onchange="selectTech(event)" value="reactjs">;Reaxtjs &nbsp;
+    <input type="checkbox" onchange="selectTech(event)" value="py">;python &nbsp;
+<br>
+<b>country</b>
+
+<select name="ctry" id="ctry">
+    <option value="india" >India</option>
+    <option value="srilanka">Srilanka</option>
+    <option value="usa">USA</option>
+    <option value="malayaia">MALAYSIA</option>
+
+</select>
+<br>
+<button onclick="addstudent()">Add Student</button>
+</form>
+<script>
+    var students = [];
+    var gender ;
+    var techs=[];
+    function selectTech(e){
+        if(e.target.checked===true){
+            techs.push(e.target.value)
+        }
+        else{
+            var i = techs.indexOf(e.target.value);
+            techs.splice(i,1)
+        }
+        console.log(techs)
+    }
+    function getGender(e){
+        gender=e.target.value;
+    }
+    function addstudent(){
+        var newstudents= {
+            fistname:'',
+            lastname:'',
+            gander:"",
+            technoligies:[],
+            country:''
+        };
+        newstudents.fistname=document.getElementById("fn").value;
+        newstudents.lastname=document.getElementById("ln").value;
+        newstudents.gander=gender;
+        newstudents.technoligies=techs;
+        newstudents.country=document.getElementById('ctry').value;
+        students.push(newstudents);
+        console.log(students)
+
+    }
+</script>
+</body>
+</html>

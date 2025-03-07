@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        width: 30px;
+        border:0px solid;
+        border-bottom: 2px solid;
+        margin: 10px;
+        outline: 0px;
+        text-align: center;
+    }
+</style>
+<body>
+    <input type="text" onkeyup="abc(event)">
+    <input type="text"  onkeyup="abc(event)">
+    <input type="text"  onkeyup="abc(event)">
+    <input type="text"  onkeyup="abc(event)">
+    <script>
+  function abc(e){
+    e.target.nextElementSibling.focus()
+  }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" onchange="selectTech(event)" value="html">:HTML &nbsp;
+    <input type="checkbox" onchange="selectTech(event)" value="css">:Css &nbsp;
+    <input type="checkbox" onchange="selectTech(event)" value="boot" >;Bootstrap &nbsp;
+    <input type="checkbox" onchange="selectTech(event)" value="java" >;java &nbsp;
+    <input type="checkbox" onchange="selectTech(event)" value="reactjs">;Reaxtjs &nbsp;
+    <input type="checkbox" onchange="selectTech(event)" value="py">;python &nbsp;
+    <script>
+        var techs = [];
+        function selectTech(e){
+           // techs.push(e.target.value)
+          if(e.target.checked===true){
+            techs.push(e.target.value)
+          }
+          else{
+            var i = techs.indexOf(e.target.value);
+            techs.splice(i,1)
+          }
+            console.log(techs )
+        }
+    </script>
+</body>
+</html>

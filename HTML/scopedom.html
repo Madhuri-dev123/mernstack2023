@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //'use strict'
+       /* var a = 100;
+        function abc(){
+            var b =200;
+            c = 300
+        }
+        abc()
+        console.log(a);
+        //console.log(b)
+        console.dir(window)*/
+
+
+        /*var z = 100;
+        function xyz(){
+           var z =10;
+            z = z +10;
+            console.log(z)
+        }
+        xyz();
+       console.log(z)*/
+
+       // scope binding
+       /*var arr = [29,23,"thanuja","Lokash",45,36];
+       for(var i=0;i<arr.length-1;i++){
+        setTimeout(function(){
+            alert("hi")
+        },2000)
+       }*/
+       var arr = [29,23,"thanuja","Lokash",45,36];
+       arr.forEach(function(a,i){
+        //console.log("hii")
+        setTimeout(function() {
+            alert(arr[i])
+        },3000);
+       })
+       /*var a =100;
+       var arr = [29,23,"thanuja","Lokash",45,36];
+       var br =[];
+        arr.forEach(function(a,i){
+           br.push(function(){
+            alert(a)
+            console.log(i)
+           })
+        })
+        console.log(br[2])*/
+       
+    </script>
+    
+</body>
+</html>

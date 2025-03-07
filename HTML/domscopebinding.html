@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="d1"></ul>
+    <ul id="d2"></ul>
+    <script>
+        let arr = ["madhuri","vandana","Rani","samabasivarao"]
+        let x = document.getElementById("d1");
+
+        let z = document.getElementById("d2")
+
+        for(let i=0;i<=arr.length-1;i++){
+            let y = document.createElement("li")
+            y.innerHTML=arr[i];
+           // y.onclick=function(){alert("hii")}
+           y.onclick=function(){alert(i)}
+          
+            x.appendChild(y)
+        }
+         function genUI(){
+        arr.forEach(function(p,q){
+            var m = document.createElement("li")
+            m.innerHTML=p;
+            let dbtn = document.createElement("button")
+            dbtn.innerHTML="delet"
+            m.appendChild(dbtn)
+            dbtn.onclick=function(){arr.splice(q,1);genUI()}
+            z.appendChild(m)
+
+        })
+    }
+    genUI();
+    </script>
+</body>
+</html>
